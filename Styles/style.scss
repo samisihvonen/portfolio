@@ -10,25 +10,13 @@ body {
     user-select: none;
 }
 
-
-#bgvideo {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-    object-fit: cover;
-    height: 100%;
-    width: 44%;
-
-}
-
 .navbar-brand {
     font-size: 160%;
     font-weight: 900;
     font-family: $headerFont;
     text-shadow: $gray-dark 2px 2px 3px;
     color: $white;
+    z-index: 999;
 }
 
 .v-line {
@@ -123,7 +111,7 @@ section {
         background: url("../images/backgrounds/cave.webp") no-repeat top center/cover;
         object-fit: contain;
         position: absolute;
-        z-index: -1;
+        z-index: 1;
 
         & #clock {
             position: absolute;
@@ -140,7 +128,7 @@ section {
     }
 
     &#skills {
-        background: url("../images/backgrounds/screens1.jpg") no-repeat bottom center/cover;
+        background: url("../images/backgrounds/screens1.webp") no-repeat bottom center/cover;
         height: 100vh;
         overflow-x: hidden;
 
@@ -154,16 +142,17 @@ section {
 
         & #cv {
             margin: auto;
-            width: 40%;
-            height: 60%;
+            width: 60%;
+            height: 80%;
+
 
             & img {
                 width: 100%;
-                height: 100%;
+                height: 10%;
                 object-fit: contain;
                 position: relative;
                 overflow: hidden;
-                mask-image: rgba(0, 0, 0, 0.2);
+                mask-image: rgba(0, 0, 0, 0.4);
             }
 
             & img:hover {
@@ -206,7 +195,7 @@ section {
     }
 
     &#projects {
-        background: url("../images/backgrounds/screens1.jpg") no-repeat center center/cover;
+        background: url("../images/backgrounds/screens1.webp") no-repeat center center/cover;
         height: 100%;
 
         & .container {
@@ -248,10 +237,11 @@ section {
 
 
     &#gallery {
-        background: url("../images/backgrounds/gallery.jpg")no-repeat bottom center/cover;
+        background: url("../images/backgrounds/gallery.webp")no-repeat bottom center/cover;
+        height: 100vh;
 
         & img {
-            height: 80vh;
+            height: 70vh;
             object-fit: contain;
         }
 
@@ -261,16 +251,22 @@ section {
 
     &#studies {
         height: 100%;
-        background: url("../images/backgrounds/screens2.jpg") no-repeat center center/cover;
+        background: url("../images/backgrounds/screens2.webp") no-repeat center center/cover;
 
         & .card {
             padding: 2%;
             opacity: 0.914;
             background: linear-gradient(110deg, #f7f7f7 0%, #666 100%);
+            border: none;
+            box-shadow: #666 15px 20px 30px;
 
             & ul {
 
                 list-style-type: none;
+
+                & p {
+                    margin-left: 5%;
+                }
             }
 
             & .certify {
@@ -284,19 +280,25 @@ section {
     }
 
     &#contact {
-        background: url("../images/backgrounds/screens1.jpg")no-repeat center center/cover;
+        background: url("../images/backgrounds/screens1.webp")no-repeat center center/cover;
 
+        & .card {
+            background: initial;
+            width: 100%;
+            margin: auto;
+        }
 
         & form {
             background: $gray-dark;
-            opacity: 0.954;
-            margin: 0 auto;
-            height: 57%;
-            padding: 1% 3%;
-            width: 30%;
+            opacity: 0.9;
+            margin: 0% auto 0;
+            height: 48%;
+            width: 40vw;
+            padding: 1%;
+
 
             & .form-group {
-                padding: 5px;
+
                 height: 30px;
 
 
@@ -428,23 +430,64 @@ section {
 
         }
 
-        &#studies {}
+        &#skills {
+            height: 100vh;
+
+            & .row-sm-3 {
+                display: inline-block;
+                margin-left: 5%;
+                padding: 3%;
+                width: 25%;
+                margin-bottom: 5%;
+                transform: translateX(-35px);
+
+
+                & .fab {
+                    width: 60%;
+                    margin-left: 2%;
+                    -webkit-transform: translateX(-35px);
+                    -moz-transform: translateX(-35px);
+                    -ms-transform: translateX(-35px);
+                    -o-transform: translateX(-35px);
+                }
+
+            }
+
+            & .container {
+                width: 60vw;
+                height: 85vh;
+                padding: 2%;
+
+                & .row-sm-3 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+
+
+                }
+
+                &#cv {
+                    height: 40vh;
+                    width: 30vw;
+
+
+                }
+            }
+
+        }
 
         &#contact {
             height: 100vh;
 
-            & h3 {
-                display: none;
-            }
-
             & form {
-                width: 60%;
-                height: 60%;
-                object-fit: cover;
+                width: 55vw;
+                height: 50%;
+
 
                 & .form-group {
+                    width: 50vw;
                     height: 30px;
-                    margin: 4% 0;
+
 
                     & #gender {
                         height: 30px;
@@ -510,205 +553,232 @@ section {
 
 }
 
-
-@media screen and (min-width:768px) and (max-width:1024px) {
-
+@media screen and (max-width:330px) and (max-height:550px) {
     section {
-        height: 100%;
-
-        & nav .navbar-brand {
-            font-size: 90%;
-
-
-        }
-
-        & .nav-link {
-            font-size: 80%;
-        }
-
-        &ul .icon {
-            &li i {
-                & .fab {
-                    color: $gray-dark;
-
-                    &:visited {
-                        color: $black;
-                    }
-                }
-            }
-
-
-        }
-
-        & #skills {
-            &#cv {
-                width: 100%;
-                height: 60%;
-
-                & img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    position: relative;
-                    overflow: hidden;
-                    mask-image: rgba(0, 0, 0, 0.2);
-                }
-
-                & img:hover {
-                    opacity: 0.5;
-                    transform: scale(0.974);
-                }
-
-                & .layer {
-                    position: relative;
-                    object-fit: contain;
-                    background-color: rgba(000, 000, 000, 0.1);
-                }
-            }
-
-
-            & .container {
-                opacity: 0.954;
-                width: 100%;
-                height: 80%;
-                background: $gray;
-            }
-
-        }
 
         &#contact {
             height: 100vh;
 
-            & h3 {
-                display: none;
-            }
-
             & form {
-                width: 60%;
-                height: 60%;
-
-                & .form-group {
-                    height: 30px;
-                    margin: 3% 0;
-
-                    & #gender {
-                        height: 30px;
-                        font-size: 40%;
-                    }
-
-                    & #name {
-                        height: 30px;
-                        width: 100%;
-                    }
-
-                    & #email {
-                        height: 30px;
-                        width: 100%;
-                    }
-
-                    & #age {
-                        height: 30px;
-                        width: 100%;
-                    }
-
-                    & #website {
-                        height: 30px;
-                        width: 100%;
-                    }
-
-                    & #btn {
-                        height: 30px;
-                        width: 100%;
-
-                    }
-                }
-            }
-
-            & .links {
-                padding-bottom: 5%;
-            }
-
-            & .copyright {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                font-size: 40%;
-            }
-
-
-        }
-
-
-
-    }
-}
-
-@media screen and (min-width:1768px) {
-    section {
-        height: 100%;
-
-
-
-        &#contact {
-            height: 100vh;
-
-
-            & form {
-                width: 40%;
-                height: 50%;
+                width: 80%;
+                height: 40%;
 
                 & .form-group {
                     height: 10px;
-                    margin: 3% 0;
+                }
+            }
+        }
+    }
 
-                    & #gender {
-                        height: 30px;
-                        font-size: 40%;
+
+    @media screen and (min-width:768px) and (max-width:1024px) {
+
+        section {
+            height: 100%;
+
+            & nav .navbar-brand {
+                font-size: 90%;
+
+
+            }
+
+            & .nav-link {
+                font-size: 80%;
+            }
+
+            &ul .icon {
+                &li i {
+                    & .fab {
+                        color: $gray-dark;
+
+                        &:visited {
+                            color: $black;
+                        }
                     }
+                }
 
-                    & #name {
-                        height: 30px;
+
+            }
+
+            & #skills {
+                &#cv {
+                    width: 100%;
+                    height: 60%;
+
+                    & img {
                         width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        position: relative;
+                        overflow: hidden;
+                        mask-image: rgba(0, 0, 0, 0.2);
                     }
 
-                    & #email {
+                    & img:hdver {
+                        opacity: 0.5;
+                        transform: scale(0.974);
+                    }
+
+                    & .layer {
+                        position: relative;
+                        object-fit: contain;
+                        background-color: rgba(000, 000, 000, 0.1);
+                    }
+                }
+
+
+                & .container {
+                    opacity: 0.954;
+                    width: 100%;
+                    height: 80%;
+                    background: $gray;
+                }
+
+            }
+
+            &#contact {
+                height: 100vh;
+
+                & form {
+                    width: 60%;
+                    height: 60%;
+
+                    & .form-group {
                         height: 30px;
-                        width: 100%;
-                    }
 
-                    & #age {
-                        height: 30px;
-                        width: 100%;
-                    }
 
-                    & #website {
-                        height: 30px;
-                        width: 100%;
-                    }
 
-                    & #btn {
-                        height: 30px;
-                        width: 100%;
+                        & #gender {
+                            height: 30px;
+                            font-size: 40%;
+                        }
 
+                        & #name {
+                            height: 30px;
+                            width: 100%;
+                        }
+
+                        & #email {
+                            height: 30px;
+                            width: 100%;
+                        }
+
+                        & #age {
+                            height: 30px;
+                            width: 100%;
+                        }
+
+                        & #website {
+                            height: 30px;
+                            width: 100%;
+                        }
+
+                        & #btn {
+                            height: 30px;
+                            width: 100%;
+
+                        }
                     }
+                }
+
+                & .links {
+                    padding-bottom: 5%;
+                }
+
+                & .copyright {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 40%;
+                }
+
+
+            }
+
+
+
+        }
+    }
+
+
+    @media screen and (min-width:1768px) {
+        section {
+            height: 100%;
+
+            &#studies {
+                height: 100vh;
+
+                & .card {
+                    margin: 0 10% 0 10%;
+                    height: 60vh;
+                    border: none;
+                    box-shadow: #666 15px 20px 30px;
                 }
             }
 
-            & .links {
-                height: 28%;
-                width: 100%;
+            &#contact {
+                height: 100vh;
+
+
+                & form {
+                    width: 60%;
+                    height: 60%;
+
+                    & .form-group {
+                        height: 60px;
+
+
+                        & #gender {
+                            height: 70px;
+                            font-size: 40%;
+                        }
+
+                        & #name {
+                            height: 70px;
+
+                        }
+
+                        & #email {
+                            height: 70px;
+
+                        }
+
+                        & #age {
+                            height: 70px;
+
+                        }
+
+                        & #website {
+                            height: 70px;
+
+                        }
+
+                        & #btn {
+                            height: 70px;
+
+
+                        }
+                    }
+                }
+
+                & .links {
+                    height: 28%;
+                    width: 100%;
+                }
+
+                & .copyright {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 40%;
+                }
+
+
             }
 
-            & .copyright {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                font-size: 40%;
-            }
 
 
         }
 
     }
-
 }
