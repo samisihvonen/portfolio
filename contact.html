@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawesome -->
+<script src="https://kit.fontawesome.com/eabeb81f5e.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous">
+  <script defer src="js/brands.js"></script>
+  <script defer src="js/solid.js"></script>
+  <script defer src="js/fontawesome.js"></script>
+  <link rel="stylesheet" href="Styles/style.css">
+  
+    <title>Contact</title>
+</head>
+<body>
+<section id="contact">
+   <nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="index.html"> &#60;Front-end &#47; developer&#62; <br> &#60;Sami Sihvonen&#62;</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link"  href="skills.html">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="studies.html">Studies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gallery.html">Gallery</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html">Contact<span
+        class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <ul class="icon">
+      <li><a href="https://twitter.com/SamiSihvonen2" target="_blank"><i class="fab fa-twitter "></i></a></li>
+      <li><a href="https://www.instagram.com/saukhos/?hl=fi" target="_blank"><i class="fab fa-instagram "></i></a></li>
+      <li><a href="http://www.linkedin.com/in/sami-sihvonen" target="_blank"><i class="fab fa-linkedin-in "></i></a></li>
+      <li><a href="https://github.com/saukho" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://codepen.io/saukho"><i class="fab fa-codepen"></i></a></li>
+      <li><a href="https://www.freecodecamp.org/sauhko"><i class="fab fa-free-code-camp"></i></a></li>
+  </ul>     
+              <form>
+          <div class="form-group">
+            <label for="name" id="name"> 
+            <input type="text" id="name"value="Firstname*"
+            class="form-control form-text" required  maxlength="25">
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="name" id="name"> 
+            <input type="text" id="name"value="Lastname*"
+            class="form-control form-text" required  maxlength="25">
+            </label>
+          </div>  
+          <div class="form-group"> 
+            <label for="gender">
+              <select id="gender">
+                <option value="">Gender</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+                <option value="3">other</option>
+                </label>           
+              </select>
+            </div>
+          <div class="form-group">
+            <label for="age" id="age">
+            <input type="text" id="age"value="Age"
+            class="form-control form-text" required minlength="1" maxlength="2">
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="email" id="email">
+            <input type="email" id="email"value="Enter Email*"
+            class="form-control form-text" required>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="website" id="website"> 
+            <input type="text" id="website"value="Website URL"
+            class="form-control form-text" required  maxlength="50">
+            </label>
+          </div>  
+          <div class="form-group">
+            <label for="comment" id="comment"> 
+            <input type="text" id="website"value="Place Comment"
+            class="form-control form-text" required  maxlength="255">
+            </label>
+          </div>   
+     
+          <div class="form-group">
+            <div class="row">
+           <div class="col"><input type="reset" id="btn" class="btn btn-warning btn-md"
+          value="reset"></div>
+            <div class="col"><input type="submit" id="btn" class="btn btn-success btn-md"
+          value="send" onclick="return Validate()"></div>
+            </div>      
+          </div>   
+        </form>   
+
+        <div class="links">    
+    <a href="https://www.udemy.com/share/1013eAAEMecV5aR38J/">
+      <img class="link" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral-light.svg" alt="udemy"></a>
+
+    <a href="https://www.freecodecamp.org/learn">
+      <img class="link" src="https://www.freecodecamp.org/news/content/images/2019/11/fcc_primary_large_24X210.svg"
+        alt="freecodecamp"></a>
+ 
+    <a href="https://amkoodari.fi/fi">
+      <img class="link" src="https://amkoodari.fi/themes/basic/images/amkoodari-logo.png" alt="amkoodari logo"></a>
+    <a
+      href="https://www.metropolia.fi/fi/opiskelu-metropoliassa/avoin-amk/tieto-ja-viestintatekniikka-virtuaaliopinnot"><img
+        src="https://www.metropolia.fi/themes/basic/images/metropolia.svg" class="link" alt="amkoodari logo"></a>
+   <a
+      href="https://www.taitotalo.fi/koulutus/ict/2064/tieto-ja-viestintatekniikan-perustutkinto-datanomi-front-end-osaaja">
+      <img class="link" src="https://www.taitotalo.fi/themes/custom/AEL-radix/tt-logo-purple.svg" alt="taitotalo"></a>
+        </div>
+  <h5 class="copyright">copyright &copy; Sami Sihvonen</h5>  
+</video>   
+  </section>
+<script>
+function Validate() {
+  var gender = document.getElementById("gender");
+  if (gender.value == "") {
+  alert("Please select a gender!");
+      return false;  }
+  alert('You will receive mail soon!');
+  return true;}
+</script>
+<!-- Bootstrap CDN Script -->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
+   

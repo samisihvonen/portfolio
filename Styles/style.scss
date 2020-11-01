@@ -1,0 +1,714 @@
+@import 'variables';
+@import 'resets';
+@import 'media';
+
+* {
+    font-family: $headerFont !important;
+}
+
+body {
+    user-select: none;
+}
+
+
+#bgvideo {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    object-fit: cover;
+    height: 100%;
+    width: 44%;
+
+}
+
+.navbar-brand {
+    font-size: 160%;
+    font-weight: 900;
+    font-family: $headerFont;
+    text-shadow: $gray-dark 2px 2px 3px;
+    color: $white;
+}
+
+.v-line {
+    border-top: 3px solid #333;
+}
+
+.wrapper {
+    margin: 10% 5%;
+}
+
+.social {
+    margin: 0 40%;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background: $bgColor1;
+    font-size: 150%;
+    padding-top: 2%;
+
+
+    &#navbarNav {
+        position: absolute;
+        background: hsla(1, 0%, 100%, .1);
+        top: 0;
+        right: 0;
+        left: 0;
+        min-height: 100%;
+        padding-top: 80px;
+    }
+
+
+
+    & .icon {
+        position: absolute;
+        z-index: 1;
+        right: 5%;
+        top: 12%;
+
+        &::before {
+            content: '';
+            display: flex;
+            z-index: -1;
+
+            &:hover {
+                color: #fff;
+                text-shadow: #2a2a2a -2px -2px -2px;
+            }
+        }
+
+        & li {
+            list-style-type: none;
+
+            & i {
+                color: #2a2a2a;
+                text-shadow: #fff 2px 3px 2px;
+                padding: 0.5rem;
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: #2a2a2a -2px -2px -2px;
+                }
+            }
+        }
+    }
+
+    & a {
+        justify-content: space-between;
+        flex: 1;
+        color: $white;
+        text-decoration: none;
+        font-family: $linkFont;
+        font-size: 160%;
+
+        &:hover {
+            color: $gray;
+            text-shadow: $white 1px 1px 1px;
+        }
+
+        &:active {
+            color: $purple;
+            text-shadow: $primary 1px 1px 1px;
+        }
+
+
+    }
+
+    &#about {
+        background: url("../images/backgrounds/cave.webp") no-repeat top center/cover;
+        object-fit: contain;
+        position: absolute;
+        z-index: -1;
+
+        & #clock {
+            position: absolute;
+            bottom: 0%;
+            right: 5%;
+            z-index: 4;
+            color: $white;
+            font-size: 2rem;
+            text-shadow: 0 0 5px rgba(222, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+
+        }
+
+
+    }
+
+    &#skills {
+        background: url("../images/backgrounds/screens1.jpg") no-repeat bottom center/cover;
+        height: 100vh;
+        overflow-x: hidden;
+
+
+        & h2,
+        h4,
+        h5 {
+            text-shadow: 2px 2px 3px silver;
+            color: $white;
+        }
+
+        & #cv {
+            margin: auto;
+            width: 40%;
+            height: 60%;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                position: relative;
+                overflow: hidden;
+                mask-image: rgba(0, 0, 0, 0.2);
+            }
+
+            & img:hover {
+                opacity: 0.5;
+
+            }
+
+            & .layer {
+                position: relative;
+                object-fit: contain;
+                background-color: rgba(000, 000, 000, 0.1);
+            }
+        }
+
+        & a.btn {
+            font-size: 70%;
+            display: flex;
+            margin: 2% 0;
+            padding: 2% 12%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        & a.btn:hover {
+            background-color: #ccc;
+            color: #000;
+            border: none;
+        }
+
+        & .container {
+            opacity: 0.954;
+            width: 40%;
+            height: 80%;
+            background: $gray;
+        }
+
+        & .fab {
+            font-size: 100%;
+        }
+    }
+
+    &#projects {
+        background: url("../images/backgrounds/screens1.jpg") no-repeat center center/cover;
+        height: 100%;
+
+        & .container {
+            opacity: 0.914;
+            position: relative;
+            background-color: $gray;
+            padding: 2% 5%;
+
+        }
+
+        & h2 {
+            font-size: 3rem;
+            text-shadow: #333 2px 2px 2px;
+            text-transform: uppercase;
+            margin-bottom: 6%;
+
+        }
+
+        & h3 {
+            font-size: 2rem;
+            color: $white;
+            text-shadow: #333 2px 2px 2px;
+            text-transform: uppercase;
+        }
+
+        & .img-fluid {
+            max-height: 30vh;
+            object-fit: contain;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        & .v-line {
+            border-top: 3px solid #333;
+            margin: 5%;
+        }
+    }
+
+
+    &#gallery {
+        background: url("../images/backgrounds/gallery.jpg")no-repeat bottom center/cover;
+
+        & img {
+            height: 80vh;
+            object-fit: contain;
+        }
+
+
+
+    }
+
+    &#studies {
+        height: 100%;
+        background: url("../images/backgrounds/screens2.jpg") no-repeat center center/cover;
+
+        & .card {
+            padding: 2%;
+            opacity: 0.914;
+            background: linear-gradient(110deg, #f7f7f7 0%, #666 100%);
+
+            & ul {
+
+                list-style-type: none;
+            }
+
+            & .certify {
+                height: 100px;
+                flex: 1;
+                float: right;
+
+
+            }
+        }
+    }
+
+    &#contact {
+        background: url("../images/backgrounds/screens1.jpg")no-repeat center center/cover;
+
+
+        & form {
+            background: $gray-dark;
+            opacity: 0.954;
+            margin: 0 auto;
+            height: 57%;
+            padding: 1% 3%;
+            width: 30%;
+
+            & .form-group {
+                padding: 5px;
+                height: 30px;
+
+
+
+                & #gender {
+                    padding-left: 2%;
+                    margin-top: 1px;
+                    padding-bottom: 1px;
+                    width: 100%;
+                    height: 42px;
+                    color: #555;
+                    font-size: 66%;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                }
+
+                & #name {
+                    width: 100%;
+                }
+
+                & label {
+                    width: 100%;
+                }
+
+                & #email {
+                    width: 100%;
+                }
+
+                & #btn {
+                    width: 100%;
+
+                }
+            }
+        }
+
+        & li {
+            list-style-type: none;
+
+            & i {
+                color: #2a2a2a;
+                text-shadow: #fff 2px 3px 2px;
+                padding: 0.5rem;
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: #2a2a2a -2px -2px -2px;
+                }
+            }
+
+
+
+
+        }
+
+        .links {
+            background: $black;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+
+            & .link {
+                margin: 2% 0;
+                width: 18%;
+                padding: 1%;
+
+                &:hover {
+                    transform: scale(1.04);
+                    opacity: 0.2;
+                }
+            }
+
+
+        }
+
+
+
+        & .copyright {
+            font-size: 70%;
+            bottom: 1%;
+            right: 5%;
+            position: absolute;
+            color: $white;
+
+        }
+    }
+}
+
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+
+@media screen and (min-width:200px) and (max-width: 768px) {
+
+    section {
+        height: 100%;
+
+        & nav .navbar-brand {
+            font-size: 90%;
+
+
+        }
+
+        & .nav-link {
+            font-size: 80%;
+        }
+
+        &ul .icon {
+            &li i {
+                & .fab {
+                    color: $gray-dark;
+
+                    &:visited {
+                        color: $black;
+                    }
+                }
+            }
+
+
+        }
+
+        &#studies {}
+
+        &#contact {
+            height: 100vh;
+
+            & h3 {
+                display: none;
+            }
+
+            & form {
+                width: 60%;
+                height: 60%;
+                object-fit: cover;
+
+                & .form-group {
+                    height: 30px;
+                    margin: 4% 0;
+
+                    & #gender {
+                        height: 30px;
+                        margin-bottom: 3px;
+                        font-size: 40%;
+                    }
+
+                    & #name {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #email {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #age {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #website {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #btn {
+                        height: 30px;
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            & .links {
+                padding-bottom: 5%;
+            }
+
+            & .copyright {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 40%;
+            }
+
+
+        }
+
+        &#gallery {
+            & h3 {
+                font-size: 70%;
+            }
+
+            & p {
+                font-size: 60%;
+            }
+        }
+
+
+
+    }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    section {
+        height: 100%;
+
+        & nav .navbar-brand {
+            font-size: 90%;
+
+
+        }
+
+        & .nav-link {
+            font-size: 80%;
+        }
+
+        &ul .icon {
+            &li i {
+                & .fab {
+                    color: $gray-dark;
+
+                    &:visited {
+                        color: $black;
+                    }
+                }
+            }
+
+
+        }
+
+        & #skills {
+            &#cv {
+                width: 100%;
+                height: 60%;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    position: relative;
+                    overflow: hidden;
+                    mask-image: rgba(0, 0, 0, 0.2);
+                }
+
+                & img:hover {
+                    opacity: 0.5;
+                    transform: scale(0.974);
+                }
+
+                & .layer {
+                    position: relative;
+                    object-fit: contain;
+                    background-color: rgba(000, 000, 000, 0.1);
+                }
+            }
+
+
+            & .container {
+                opacity: 0.954;
+                width: 100%;
+                height: 80%;
+                background: $gray;
+            }
+
+        }
+
+        &#contact {
+            height: 100vh;
+
+            & h3 {
+                display: none;
+            }
+
+            & form {
+                width: 60%;
+                height: 60%;
+
+                & .form-group {
+                    height: 30px;
+                    margin: 3% 0;
+
+                    & #gender {
+                        height: 30px;
+                        font-size: 40%;
+                    }
+
+                    & #name {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #email {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #age {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #website {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #btn {
+                        height: 30px;
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            & .links {
+                padding-bottom: 5%;
+            }
+
+            & .copyright {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 40%;
+            }
+
+
+        }
+
+
+
+    }
+}
+
+@media screen and (min-width:1768px) {
+    section {
+        height: 100%;
+
+
+
+        &#contact {
+            height: 100vh;
+
+
+            & form {
+                width: 40%;
+                height: 50%;
+
+                & .form-group {
+                    height: 10px;
+                    margin: 3% 0;
+
+                    & #gender {
+                        height: 30px;
+                        font-size: 40%;
+                    }
+
+                    & #name {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #email {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #age {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #website {
+                        height: 30px;
+                        width: 100%;
+                    }
+
+                    & #btn {
+                        height: 30px;
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            & .links {
+                height: 28%;
+                width: 100%;
+            }
+
+            & .copyright {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 40%;
+            }
+
+
+        }
+
+    }
+
+}

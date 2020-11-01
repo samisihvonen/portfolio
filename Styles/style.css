@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Staatliches&family=Syne+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  section {
+    height: 100%;
+  }
+  section#contact {
+    height: 100vh;
+  }
+  section#contact h3 {
+    display: none;
+  }
+  section#contact form {
+    width: 80%;
+    height: 58%;
+  }
+  section#contact form .form-group {
+    height: 26px;
+  }
+  section#contact .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40%;
+  }
+}
+
+* {
+  font-family: "Staatliches", cursive !important;
+}
+
+body {
+  user-select: none;
+}
+
+#bgvideo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  object-fit: cover;
+  height: 100%;
+  width: 44%;
+}
+
+.navbar-brand {
+  font-size: 160%;
+  font-weight: 900;
+  font-family: "Staatliches", cursive;
+  text-shadow: #343a40 2px 2px 3px;
+  color: #fff;
+}
+
+.v-line {
+  border-top: 3px solid #333;
+}
+
+.wrapper {
+  margin: 10% 5%;
+}
+
+.social {
+  margin: 0 40%;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom left, #b6b6b6 0%, #333 40%, #1f1f24 60%, #c4c4c4 100%);
+  font-size: 150%;
+  padding-top: 2%;
+}
+
+section#navbarNav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 100%;
+  padding-top: 80px;
+}
+
+section .icon {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  top: 12%;
+}
+
+section .icon::before {
+  content: '';
+  display: flex;
+  z-index: -1;
+}
+
+section .icon::before:hover {
+  color: #fff;
+  text-shadow: #2a2a2a -2px -2px -2px;
+}
+
+section .icon li {
+  list-style-type: none;
+}
+
+section .icon li i {
+  color: #2a2a2a;
+  text-shadow: #fff 2px 3px 2px;
+  padding: 0.5rem;
+}
+
+section .icon li i:hover {
+  color: #fff;
+  text-shadow: #2a2a2a -2px -2px -2px;
+}
+
+section a {
+  justify-content: space-between;
+  flex: 1;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Krona One", sans-serif;
+  font-size: 160%;
+}
+
+section a:hover {
+  color: #6c757d;
+  text-shadow: #fff 1px 1px 1px;
+}
+
+section a:active {
+  color: #6f42c1;
+  text-shadow: #007bff 1px 1px 1px;
+}
+
+section#about {
+  background: url("../images/backgrounds/cave.webp") no-repeat top center/cover;
+  object-fit: contain;
+  position: absolute;
+  z-index: -1;
+}
+
+section#about #clock {
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  z-index: 4;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0 0 5px #deafe6, 0 0 20px rgba(10, 175, 230, 0);
+}
+
+section#skills {
+  background: url("../images/backgrounds/screens1.jpg") no-repeat bottom center/cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section#skills h2,
+section#skills h4,
+section#skills h5 {
+  text-shadow: 2px 2px 3px silver;
+  color: #fff;
+}
+
+section#skills #cv {
+  margin: auto;
+  width: 40%;
+  height: 60%;
+}
+
+section#skills #cv img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  overflow: hidden;
+  mask-image: rgba(0, 0, 0, 0.2);
+}
+
+section#skills #cv img:hover {
+  opacity: 0.5;
+}
+
+section#skills #cv .layer {
+  position: relative;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+section#skills a.btn {
+  font-size: 70%;
+  display: flex;
+  margin: 2% 0;
+  padding: 2% 12%;
+  width: 100%;
+  z-index: 1;
+}
+
+section#skills a.btn:hover {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+}
+
+section#skills .container {
+  opacity: 0.954;
+  width: 40%;
+  height: 80%;
+  background: #6c757d;
+}
+
+section#skills .fab {
+  font-size: 100%;
+}
+
+section#projects {
+  background: url("../images/backgrounds/screens1.jpg") no-repeat center center/cover;
+  height: 100%;
+}
+
+section#projects .container {
+  opacity: 0.914;
+  position: relative;
+  background-color: #6c757d;
+  padding: 2% 5%;
+}
+
+section#projects h2 {
+  font-size: 3rem;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+  margin-bottom: 6%;
+}
+
+section#projects h3 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: #333 2px 2px 2px;
+  text-transform: uppercase;
+}
+
+section#projects .img-fluid {
+  max-height: 30vh;
+  object-fit: contain;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+section#projects .v-line {
+  border-top: 3px solid #333;
+  margin: 5%;
+}
+
+section#gallery {
+  background: url("../images/backgrounds/gallery.jpg") no-repeat bottom center/cover;
+}
+
+section#gallery img {
+  height: 80vh;
+  object-fit: contain;
+}
+
+section#studies {
+  height: 100%;
+  background: url("../images/backgrounds/screens2.jpg") no-repeat center center/cover;
+}
+
+section#studies .card {
+  padding: 2%;
+  opacity: 0.914;
+  background: linear-gradient(110deg, #f7f7f7 0%, #666 100%);
+}
+
+section#studies .card ul {
+  list-style-type: none;
+}
+
+section#studies .card .certify {
+  height: 100px;
+  flex: 1;
+  float: right;
+}
+
+section#contact {
+  background: url("../images/backgrounds/screens1.jpg") no-repeat center center/cover;
+}
+
+section#contact form {
+  background: #343a40;
+  opacity: 0.954;
+  margin: 0 auto;
+  height: 57%;
+  padding: 1% 3%;
+  width: 30%;
+}
+
+section#contact form .form-group {
+  padding: 5px;
+  height: 30px;
+}
+
+section#contact form .form-group #gender {
+  padding-left: 2%;
+  margin-top: 1px;
+  padding-bottom: 1px;
+  width: 100%;
+  height: 42px;
+  color: #555;
+  font-size: 66%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+section#contact form .form-group #name {
+  width: 100%;
+}
+
+section#contact form .form-group label {
+  width: 100%;
+}
+
+section#contact form .form-group #email {
+  width: 100%;
+}
+
+section#contact form .form-group #btn {
+  width: 100%;
+}
+
+section#contact li {
+  list-style-type: none;
+}
+
+section#contact li i {
+  color: #2a2a2a;
+  text-shadow: #fff 2px 3px 2px;
+  padding: 0.5rem;
+}
+
+section#contact li i:hover {
+  color: #fff;
+  text-shadow: #2a2a2a -2px -2px -2px;
+}
+
+section#contact .links {
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+section#contact .links .link {
+  margin: 2% 0;
+  width: 18%;
+  padding: 1%;
+}
+
+section#contact .links .link:hover {
+  transform: scale(1.04);
+  opacity: 0.2;
+}
+
+section#contact .copyright {
+  font-size: 70%;
+  bottom: 1%;
+  right: 5%;
+  position: absolute;
+  color: #fff;
+}
+
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+/* MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  MEDIA BreakPoints Queries  */
+@media screen and (min-width: 200px) and (max-width: 768px) {
+  section {
+    height: 100%;
+  }
+  section nav .navbar-brand {
+    font-size: 90%;
+  }
+  section .nav-link {
+    font-size: 80%;
+  }
+  sectionul .iconli i .fab {
+    color: #343a40;
+  }
+  sectionul .iconli i .fab:visited {
+    color: #000000;
+  }
+  section#contact {
+    height: 100vh;
+  }
+  section#contact h3 {
+    display: none;
+  }
+  section#contact form {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+  }
+  section#contact form .form-group {
+    height: 30px;
+    margin: 4% 0;
+  }
+  section#contact form .form-group #gender {
+    height: 30px;
+    margin-bottom: 3px;
+    font-size: 40%;
+  }
+  section#contact form .form-group #name {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #email {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #age {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #website {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #btn {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact .links {
+    padding-bottom: 5%;
+  }
+  section#contact .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40%;
+  }
+  section#gallery h3 {
+    font-size: 70%;
+  }
+  section#gallery p {
+    font-size: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  section {
+    height: 100%;
+  }
+  section nav .navbar-brand {
+    font-size: 90%;
+  }
+  section .nav-link {
+    font-size: 80%;
+  }
+  sectionul .iconli i .fab {
+    color: #343a40;
+  }
+  sectionul .iconli i .fab:visited {
+    color: #000000;
+  }
+  section #skills#cv {
+    width: 100%;
+    height: 60%;
+  }
+  section #skills#cv img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    overflow: hidden;
+    mask-image: rgba(0, 0, 0, 0.2);
+  }
+  section #skills#cv img:hover {
+    opacity: 0.5;
+    transform: scale(0.974);
+  }
+  section #skills#cv .layer {
+    position: relative;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  section #skills .container {
+    opacity: 0.954;
+    width: 100%;
+    height: 80%;
+    background: #6c757d;
+  }
+  section#contact {
+    height: 100vh;
+  }
+  section#contact h3 {
+    display: none;
+  }
+  section#contact form {
+    width: 60%;
+    height: 60%;
+  }
+  section#contact form .form-group {
+    height: 30px;
+    margin: 3% 0;
+  }
+  section#contact form .form-group #gender {
+    height: 30px;
+    font-size: 40%;
+  }
+  section#contact form .form-group #name {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #email {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #age {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #website {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #btn {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact .links {
+    padding-bottom: 5%;
+  }
+  section#contact .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40%;
+  }
+}
+
+@media screen and (min-width: 1768px) {
+  section {
+    height: 100%;
+  }
+  section#contact {
+    height: 100vh;
+  }
+  section#contact form {
+    width: 40%;
+    height: 50%;
+  }
+  section#contact form .form-group {
+    height: 10px;
+    margin: 3% 0;
+  }
+  section#contact form .form-group #gender {
+    height: 30px;
+    font-size: 40%;
+  }
+  section#contact form .form-group #name {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #email {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #age {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #website {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact form .form-group #btn {
+    height: 30px;
+    width: 100%;
+  }
+  section#contact .links {
+    height: 28%;
+    width: 100%;
+  }
+  section#contact .copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
